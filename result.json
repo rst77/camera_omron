@@ -1,0 +1,134 @@
+{
+  "face": [
+    {
+      "face": {
+        "x": 1062,
+        "y": 389,
+        "size": 252,
+        "confidence": 533
+      },
+      "direction": {
+        "yaw": 2,
+        "pitch": -15,
+        "roll": -2,
+        "confidence": 19
+      },
+      "age": {
+        "age": 67,
+        "confidence": 333
+      },
+      "gender": {
+        "gender": 1,
+        "confidence": 767
+      },
+      "gaze": {
+        "yaw": 3,
+        "pitch": -9
+      },
+      "blink": {
+        "left": 432,
+        "right": 407
+      },
+      "expression": {
+        "neutral": 1,
+        "happiness": 73,
+        "surprise": 0,
+        "anger": 8,
+        "sadness": 18,
+        "positive": 47
+      },
+      "recognition": {
+        "user": -127,
+        "score": -127
+      }
+    },
+    {
+      "face": {
+        "x": 728,
+        "y": 870,
+        "size": 240,
+        "confidence": 566
+      },
+      "direction": {
+        "yaw": 6,
+        "pitch": -13,
+        "roll": -12,
+        "confidence": 1
+      },
+      "age": {
+        "age": 45,
+        "confidence": 153
+      },
+      "gender": {
+        "gender": 1,
+        "confidence": 713
+      },
+      "gaze": {
+        "yaw": -4,
+        "pitch": 3
+      },
+      "blink": {
+        "left": 418,
+        "right": 465
+      },
+      "expression": {
+        "neutral": 44,
+        "happiness": 1,
+        "surprise": 15,
+        "anger": 39,
+        "sadness": 1,
+        "positive": -50
+      },
+      "recognition": {
+        "user": -127,
+        "score": -127
+      }
+    },
+    {
+      "face": {
+        "x": 618,
+        "y": 417,
+        "size": 216,
+        "confidence": 671
+      },
+      "direction": {
+        "yaw": 3,
+        "pitch": -20,
+        "roll": 1,
+        "confidence": 1
+      },
+      "age": {
+        "age": 68,
+        "confidence": 400
+      },
+      "gender": {
+        "gender": 0,
+        "confidence": 538
+      },
+      "gaze": {
+        "yaw": 4,
+        "pitch": -2
+      },
+      "blink": {
+        "left": 366,
+        "right": 455
+      },
+      "expression": {
+        "neutral": 0,
+        "happiness": 100,
+        "surprise": 0,
+        "anger": 0,
+        "sadness": 0,
+        "positive": 100
+      },
+      "recognition": {
+        "user": -127,
+        "score": -127
+      }
+    }
+  ],
+  "image": {
+    "width": 320,
+    "height": 240
+  }
+}
