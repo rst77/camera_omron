@@ -27,7 +27,7 @@ function identifica_mao(){
 
 function faz_reconhecimento(){
     jQuery.ajax({
-        url     : 'http://192.168.1.61:3000/reconhecePessoa',
+        url     : '/reconhecePessoa',
         type    : 'GET',
         dataType: 'json',
         success : function(data){
@@ -39,7 +39,7 @@ function faz_reconhecimento(){
             $('#exposicao_dados').empty();
             $('#exposicao_dados').html( tableWrapper );
 
-            $('#imagem').attr("src","http://192.168.1.61/registros/" + data.image.endereco);
+            $('#imagem').attr("src","/registros/" + data.image.endereco);
 
             limpa_botoes();
             if (data.face.length > 0)
@@ -151,12 +151,26 @@ function faz_reconhecimento(){
                     $('#texto-corpos').show();    
                     $('#valor-corpos').show();
                     $('#valor-corpos').text( data.body.length );
+                    var corpoTitle = "";
+                    for(var i = 0; i < data.body.length; i++) {
+                        if (i > 0)
+                            corpoTitle += ",\n";
+                        corpoTitle += Math.round((data.body[i].confidence/1000)*100) + "%";
+                    }
+                    $('#valor-corpos').prop('title',corpoTitle);
                 }
 
-                if ( data.face.length > 0 ) {
+                if ( data.hand.length > 0 ) {
                     $('#texto-maos').show();    
                     $('#valor-maos').show();
                     $('#valor-maos').text( data.hand.length );
+                    var maoTitle = "";
+                    for(var i = 0; i < data.hand.length; i++) {
+                        if (i > 0)
+                            maoTitle += ",\n";
+                        maoTitle += Math.round((data.hand[i].confidence/1000)*100) + "%";
+                    }
+                    $('#valor-maos').prop('title',maoTitle);                    
                 }
 
             }
@@ -169,6 +183,10 @@ function faz_reconhecimento(){
             }
 
             $('#loading').hide();
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            $('#loading').hide();
+            alert("Ocorreu um erro durante a captura da imagem... :(");
         }
     });
 }
