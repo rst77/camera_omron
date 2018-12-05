@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Ethereal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Reconhecimento Facial</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+		<script type="text/javascript">
+			setInterval("atualiza_dados();",20000); 
+		</script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Wrapper -->
+					<div id="wrapper">
+                            <section class="panel color1">
+                                <div class="inner columns aligned">
+                                    <div class="span-1-05">
+										<div class="field quarter">
+											<input type="checkbox" id="atualizacao-automatica" name="atualizacao-automatica" class="color2" checked="true"/>
+											<label for="atualizacao-automatica">Atualização Automática</label>
+											<img id="loading" src="static/images/carregando.gif" width="25" height="25" alt=""/>
+										</div>
+                                        <h3 class="major"><br>Resumo Reconhecimento</h3>
+                                        <ul class="actions fit">
+                                            <li><a id="botaoPessoa" onclick="identifica_pessoa()" class="button medium color4">Pessoa</a></li>
+                                            <li><a id="botaoCorpo" onclick="identifica_corpo()" class="button medium color4">Corpo</a></li>
+                                            <li><a id="botaoMao" onclick="identifica_mao()" class="button medium color4">Mão</a></li>
+                                        </ul>
+                                        <img id="imagem" src="" alt="" />
+										
+                                    </div>
+                                </div>
+                            </section>
+
+						<!-- Panel (Spotlight) -->
+							<section class="panel spotlight small " id="lista-pessoas">
+								<div class="content span-10" id="area_dados">
+									<div id="exposicao_dados" class="table-wrapper">
+									<!--
+										<table>
+											<thead>
+												<tr>
+													<th>Sexo</th>
+													<th>Cert</th>
+													<th>Idade</th>
+													<th>Cert</th>
+													<th>Humor</th>
+												</tr>
+											</thead>
+											<tbody id="detalhe_reconhecimento">
+
+											</tbody>
+										</table>
+										-->
+									</div> 
+								</div>
+								<div class="image filtered tinted" data-position="top left">
+									<img src="static/images/pic02.jpg" alt="" />
+								</div>
+							</section>
+
+						<!-- Panel -->
+						<section class="panel" id="painel-texto">
+							<div class="intro color2">
+								<h2 class="major" id="texto-corpos">Corpos Reconhecidos</h2>
+								<h1 class="major" id="valor-corpos">0</h1>
+								<h2 class="major" id="texto-maos">Mãos Reconhecidas</h2>
+								<h1 class="major" id="valor-maos">0</h1>
+							</div>
+						</section>
+						<!-- Copyright -->
+							<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+							
+
+					</div>
+			
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/main.js"></script>
+			<script type="text/javascript" src="static/ajax.js"></script>
+			<script type="text/javascript">
+				$('#lista-pessoas').hide();
+				$('#painel-texto').hide();
+				oculta_labels_reconhecimento();
+			</script>
+    </body>
+</html>

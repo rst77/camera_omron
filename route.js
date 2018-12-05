@@ -18,12 +18,13 @@ var appRouter = function (app) {
   });
 
   app.get("/reconhecePessoa", function (req, res) {
-
+    console.time('test');
     reconhecimento.reconhecePessoa().then(function(result) {
         console.log( JSON.stringify(result, null, '  ') ) ;
         console.log('');
         console.log('');
         console.log('');
+        console.timeEnd('test');
         res.status(200).send( result );
     }, function(err) {
         console.log(err);

@@ -18,17 +18,17 @@ module.exports = {
                     body: 1,
                     hand: 1,
                     face: 1,
-                    direction: 1,
+                    //direction: 1,
                     age: 1,
                     gender: 1,
-                    gaze: 1,
-                    blink: 1,
+                    //gaze: 1,
+                    //blink: 1,
                     expression: 1,
                     recognition: 1,
                     image       : 1,            // Enable capturing image
                     imageType   : 3,            // Save the image as a file
                     imageFormat : 'png',        // Image format
-                    imagePath   : './' + endereco, // File path
+                    imagePath   : '/home/pi/mysql/site/registros/' + endereco, // File path
                     imageMarker : true          // Draw markers in the image
                 });
             }).then((res) => {
